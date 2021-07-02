@@ -209,11 +209,11 @@
               price = price + option.price;
             }
           } else if (option.default){
-              price = price - option.price;
+            price = price - option.price;
           }
           /* pobrac informacje o obrazku ktory nas interesuje */
           const optionImg = this.imageWrapper.querySelector('.' + paramId + '-' + optionId);
-          console.log(optionImg)
+          console.log(optionImg);
 
           if(optionImg){
             if(isSelected){
@@ -391,11 +391,11 @@
 
       thisCart.dom.productList.addEventListener('updated', function(){
         thisCart.update();
-      })
+      });
 
       thisCart.dom.productList.addEventListener('remove', function(event){
         thisCart.remove(event.detail.cartProduct);
-      })
+      });
     }
 
     add(menuProduct){
@@ -424,8 +424,8 @@
       let subTotalPrice = 0;
 
       for(let product of thisCart.products){
-          totalNumber = totalNumber + product.amount;
-          subTotalPrice = subTotalPrice + product.price;
+        totalNumber = totalNumber + product.amount;
+        subTotalPrice = subTotalPrice + product.price;
       }
       if(!totalNumber == 0){
         thisCart.totalPrice = subTotalPrice + deliveryFee;
@@ -433,13 +433,13 @@
       } else{
         thisCart.dom.deliveryFee.innerHTML = 0;
         thisCart.totalPrice = 0;
-      };
+      }
 
       thisCart.dom.totalNumber.innerHTML = totalNumber;
       thisCart.dom.subTotalPrice.innerHTML = subTotalPrice;
       for(let totalP of thisCart.dom.totalPrice){
         totalP.innerHTML = thisCart.totalPrice;
-      };
+      }
 
       console.log(thisCart);
       console.log(deliveryFee);
@@ -524,7 +524,7 @@
       thisCartProduct.dom.remove.addEventListener('click', function(){
         event.preventDefault();
         thisCartProduct.remove();
-      })
+      });
     }
   }
 
