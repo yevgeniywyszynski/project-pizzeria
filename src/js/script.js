@@ -291,7 +291,7 @@
       const thisWidget = this;
 
       thisWidget.getElements(element);
-      thisWidget.setValue(settings.amountWidget.defaultValue);
+      thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
       thisWidget.iniyActions();
 
       // consolelog('AmountWidget', thisWidget);
@@ -430,16 +430,21 @@
       if(!totalNumber == 0){
         thisCart.totalPrice = subTotalPrice + deliveryFee;
         thisCart.dom.deliveryFee.innerHTML = deliveryFee;
+        
+        for(let totalP of thisCart.dom.totalPrice){
+          totalP.innerHTML = thisCart.totalPrice;
+        }
       } else{
         thisCart.dom.deliveryFee.innerHTML = 0;
         thisCart.totalPrice = 0;
+        for(let totalP of thisCart.dom.totalPrice){
+          totalP.innerHTML = 0;
+        }
       }
 
       thisCart.dom.totalNumber.innerHTML = totalNumber;
       thisCart.dom.subTotalPrice.innerHTML = subTotalPrice;
-      for(let totalP of thisCart.dom.totalPrice){
-        totalP.innerHTML = thisCart.totalPrice;
-      }
+
 
       console.log(thisCart);
       console.log(deliveryFee);
