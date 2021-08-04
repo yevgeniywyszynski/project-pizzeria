@@ -1,14 +1,36 @@
 import { settings, select, classNames } from './settings.js';
 import Product from './componets/Product.js';
 import Cart from './componets/Cart.js';
+import Booking from './componets/Booking.js';
 
 const app = {
+  initBooking: function(){
+    const thisApp = this;
+
+    const widgetReservation = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(widgetReservation);
+  },
+
   initPages: function(){
     const thisApp = this;
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    thisApp.activatePage(thisApp.pages[0].id);
+
+    const idFromHash = window.location.hash.replace('#/', '');
+    
+
+    let pageMatchingHash = thisApp.pages[0].id;
+
+    for(let page of thisApp.pages){
+      if(page.id == idFromHash){
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
+
+
+    thisApp.activatePage(pageMatchingHash);
 
     for(let link of thisApp.navLinks){
       link.addEventListener('click', function(event){
@@ -21,6 +43,9 @@ const app = {
         /* run thisApp.activePage with that id */
 
         thisApp.activatePage(id);
+        
+        /* change URL hash */
+        window.location.hash = '#/' + id;
       });
     }
   },
@@ -95,8 +120,10 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
+    thisApp.initBooking();
   },
 };
 app.init();
+
 
 
