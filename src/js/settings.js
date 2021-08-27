@@ -8,6 +8,11 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    floorPlan: '.floor-plan',
+    phone: '[name="phone"]',
+    address: '[name="address"]',
+    starters: '[name="starter"]',
+    form: '.booking-form',
   },
   nav: {
     links: '.main-nav a',
