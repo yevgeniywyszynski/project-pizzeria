@@ -219,6 +219,7 @@ class Booking {
         console.log('parsedResponse', parsedResponse);
         /*zapamietuje js o nowej rezerwacji po wyslaniu na serwer*/
         thisBooking.makeBooked(payload.date,payload.hour,payload.duration,payload.table);
+        location.reload();
       });
   }
 
