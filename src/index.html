@@ -9,6 +9,7 @@
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
@@ -70,12 +71,103 @@
       <div id="product-list" class="product-list container"></div>
     </section>
     <section id="booking">
-      <div class="booking-wrapper container"></div>
+      <div class="wrapper container"></div>
     </section>
   </div>
 
   <script id="template-home-page" type="text/x-handlebars-template">
-    <h1>Welcome on home page</h1>
+    <div class="wrapper container">
+      <div class="home-page-wrapper">
+        <div class="navigation-homepage">
+          <div class="order-online">
+            <p>ORDER ONLINE</p>
+          </div>
+          <div class="book-table">
+            <p>BOOK A TABLE</p>
+          </div>
+        </div>
+        <div class="banner-open">
+          <h1 class="title-hour">OPENING HOURS</p>
+          <h4 class="subtitle-time">TUE-SUN, 12PM - 12AM</p>
+        </div>
+      </div>
+      <div class="carusel-wrapper">
+        <div class="carousel-cell">
+          <div class="carusel">
+            <img class="carusel-image" src="images/homepage/pizza-3.jpg">
+          </div>
+          <div class="about-carusela">
+            <p class="amazing-title">AMAZING SERVICE!<p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta cumque incidunt, iure quasi aperiam aspernatur voluptatum expedita deleniti quis.<p>
+            <p> - Margaret Osborne</p>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="carusel">
+            <img class="carusel-image" src="images/homepage/pizza-3.jpg">
+          </div>
+          <div class="about-carusela">
+            <p>AMAZING SERVICE 2!<p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta cumque incidunt, iure quasi aperiam aspernatur voluptatum expedita deleniti quis.<p>
+            <p> - Margaret Osborne</p>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="carusel">
+            <img class="carusel-image" src="images/homepage/pizza-3.jpg">
+          </div>
+          <div class="about-carusela">
+            <p>AMAZING SERVICE 3!<p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta cumque incidunt, iure quasi aperiam aspernatur voluptatum expedita deleniti quis.<p>
+            <p> - Margaret Osborne</p>
+          </div>
+        </div>
+      </div>
+      <div class="insta-wrapper">
+        <div class="items-images">
+          <img src="./images/homepage/pizza-4.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+        <div class="items-images">
+          <img src="./images/homepage/pizza-5.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+        <div class="items-images">
+          <img src="./images/homepage/pizza-6.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+        <div class="items-images">
+          <img src="./images/homepage/pizza-7.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+        <div class="items-images">
+          <img src="./images/homepage/pizza-8.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+        <div class="items-images">
+          <img src="./images/homepage/pizza-9.jpg">
+          <div>
+            <a><i class="fas fa-heart"></i></a>
+            <a><i class="fas fa-share-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </script>
 
   <script id="template-cart-product" type="text/x-handlebars-template">
@@ -249,9 +341,10 @@
       </form>
     </div>
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="js/app.js" type="module"></script>
   <script src="vendor/range-slider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>

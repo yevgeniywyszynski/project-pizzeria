@@ -1,0 +1,128 @@
+.navigation-homepage {
+  display: flex;
+  justify-content: space-between;
+} .order-online {
+  font-size: 20px;
+  font-family: 'Roboto';
+  text-align: center;
+  background: url('../../images/homepage/pizza-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  margin-right: 6px;
+  border-radius: 5px;
+
+  p{
+    transition: all 0.5s;
+  }
+
+  &:hover p{
+    transform: translateY(-20px);
+  }
+}
+
+.book-table {
+  font-size: 20px;
+  font-family: 'Roboto';
+  text-align: center;
+  background: url('../../images/homepage/pizza-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  margin-right: 6px;
+  border-radius: 5px;
+
+  p{
+    transition: all 0.5s;
+  }
+
+  &:hover p{
+    transform: translateY(-20px);
+  }
+}
+
+.banner-open {
+  background-color: #ff6b6b;
+  color:#fff;
+  margin-top: 6px;
+  height: 120px;
+  width: 598px;
+  line-height: 0;
+  border-radius: 5px;
+  margin-bottom: 100px;
+} .title-hour {
+  font-size: 20px;
+  font-family: 'Roboto';
+  text-align: center;
+  padding-top: 40px;
+  margin: 0;
+} .subtitle-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/*carusela*/
+
+.carusel-wrapper {
+  margin-bottom: 130px;
+} 
+
+.carusel-wrapper .carousel-cell{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.carusel .carusel-image {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+} .about-carusela {
+  margin-left: 35px;
+  font-family: 'Roboto';
+} .amazing-title {
+  font-weight: bold;
+}
+
+.flickity-button {
+  display: none;
+}
+.flickity-page-dots {
+  bottom: -40px !important;
+}
+
+/*insta-image*/
+
+.insta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+} .items-images {
+  width: 200px;
+  padding: 5px;
+  height: 200px;
+} .items-images img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+
+  &:hover {
+
+  }
+}

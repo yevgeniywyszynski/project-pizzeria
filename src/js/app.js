@@ -134,5 +134,7 @@ const app = {
 };
 app.init();
 
-
+const flkty = new Flickity( '.carusel-wrapper', {
+  // options
+});
 
