@@ -1,7 +1,9 @@
 .navigation-homepage {
   display: flex;
   justify-content: space-between;
-} .order-online {
+} 
+
+.order-online {
   font-size: 20px;
   font-family: 'Roboto';
   text-align: center;
@@ -57,20 +59,24 @@
 
 .banner-open {
   background-color: #ff6b6b;
-  color:#fff;
+  color: #fff;
   margin-top: 6px;
   height: 120px;
   width: 598px;
   line-height: 0;
   border-radius: 5px;
   margin-bottom: 100px;
-} .title-hour {
+} 
+
+.title-hour {
   font-size: 20px;
   font-family: 'Roboto';
   text-align: center;
   padding-top: 40px;
   margin: 0;
-} .subtitle-time {
+} 
+
+.subtitle-time {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,16 +99,21 @@
   width: 190px;
   height: 190px;
   object-fit: cover;
-} .about-carusela {
+} 
+
+.about-carusela {
   margin-left: 35px;
   font-family: 'Roboto';
-} .amazing-title {
+} 
+
+.amazing-title {
   font-weight: bold;
 }
 
 .flickity-button {
   display: none;
 }
+
 .flickity-page-dots {
   bottom: -40px !important;
 }
@@ -110,19 +121,82 @@
 /*insta-image*/
 
 .insta-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-} .items-images {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 10px;
+} 
+
+.items-images {
   width: 200px;
-  padding: 5px;
+  position: relative;
   height: 200px;
-} .items-images img {
+  background-color: #000;
+
+  &:hover .image-icons {
+    opacity: 1;
+  }
+
+  &:hover img {
+    opacity: 0.7;
+  }
+
+} 
+
+.items-images img {
   width: 100%;
   border-radius: 5px;
   height: 100%;
   object-fit: cover;
+  transition: all 1s;
+}
 
-  &:hover {
+.image-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 1s;
+} 
 
+.like {
+  color: #e55039;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.share-insta {
+  color: #e55039;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .navigation-homepage {
+    flex-direction: column;
   }
+
+  .order-online {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .book-table {
+    width: 100%;
+  }
+
+  .banner-open {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .carusel-wrapper .carousel-cell {
+    flex-direction: column;
+  }
+
+  .insta-wrapper {
+    justify-content: center;
+    grid-template-columns: 200px;
+  }
+
 }
