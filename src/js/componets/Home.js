@@ -1,10 +1,14 @@
+/* global Flickity */ // eslint-disable-line no-unused-vars
 import { templates } from '../settings.js';
 
 
 class Home {
   constructor(element){
+  
     const thisHome = this;
     thisHome.render(element);
+    new Flickity( '.carusel-wrapper');
+    
   }
 
   render(element){
